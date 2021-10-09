@@ -1,6 +1,9 @@
 package git.act.classes;
 
+import java.time.LocalDate;
+
 import git.act.enums.Gender;
+  
 
 public class Student extends Person {
 	Gender gender;
@@ -13,27 +16,26 @@ public class Student extends Person {
 		this.gender = gender;
 	}
 
-	public Student(int id, String firstName, String lastName, int age, Gender gender) {
-		super(id, firstName, lastName, age);
+	public Student(int id, String firstName, String lastName, int age, LocalDate birthDate, Gender gender) {
+		super(id, firstName, lastName, age, birthDate);
 		this.gender = gender;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [gender=" + gender + ", getId()=" + getId() + ", getFirstName()=" + getFirstName()
-				+ ", getLastName()=" + getLastName() + ", getAge()=" + getAge() + "]";
+		return "Student [ Id=" + getId() + ", First Name=" + getFirstName()
+				+ ",Last Name=" + getLastName() + ", BirthDate=" + getBirthDate() + ", Age=" + getAge()
+				+ ", Gender=" + gender +"]";
 	}
 
-//	public Student(int id, String firstName, String lastName, int age) {
-//		super(id, firstName, lastName, age);
-//		// TODO Auto-generated constructor stub
-//	}
-//
 //	@Override
 //	public String toString() {
-//		return "Student [getId()=" + getId() + ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName()
-//				+ ", getAge()=" + getAge() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-//				+ ", toString()=" + super.toString() + "]";
+//		return "Student [ Id= " + getId() + ", FirstName= " + getFirstName()
+//				+ ", LastName= " + getLastName() + ", Age= " + getAge() + ", Gender= " + gender + "]";
 //	}
+
+
+
+
 
 }
