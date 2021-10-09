@@ -1,19 +1,16 @@
 package git.act.classes;
 
 public class Teacher extends Person {
-	String title;
 
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	public Teacher(int id, String firstName, String lastName, int age) {
+		super(id, firstName, lastName, age);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Teacher [title=" + title + ", id=" + id + ", name=" + name + ", Gender=" + Gender + "]";
+		return "Teacher [getId()=" + getId() + ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName()
+				+ ", getAge()=" + getAge() + "]";
 	}
 
 }
