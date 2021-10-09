@@ -7,7 +7,7 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private LocalDate birthDate;
-	private int age;
+
 
 	public int getId() {
 		return id;
@@ -41,20 +41,12 @@ public class Person {
 		this.birthDate = birthDate;
 	}
 
-	public int getAge() {
-		return age;
-	}
 
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Person(int id, String firstName, String lastName, int age, LocalDate birthDate) {
+	public Person(int id, String firstName, String lastName, LocalDate birthDate) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.age = age;
 		this.birthDate = birthDate;
 	}
 

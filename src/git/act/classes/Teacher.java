@@ -1,11 +1,23 @@
 package git.act.classes;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import git.act.enums.Gender;
 
 public class Teacher extends Person {
+	int age;
 	Gender gender;
+	
+	public int getAge() {
+		LocalDate today = LocalDate.now();
+		age = Period.between(getBirthDate(), today).getYears();
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 	public Gender getGender() {
 		return gender;
@@ -15,15 +27,17 @@ public class Teacher extends Person {
 		this.gender = gender;
 	}
 
-	public Teacher(int id, String firstName, String lastName, int age, LocalDate birthDate, Gender gender) {
-		super(id, firstName, lastName, age, birthDate);
+	public Teacher(int id, String firstName, String lastName, LocalDate birthDate, Gender gender) {
+		super(id, firstName, lastName, birthDate);
 		this.gender = gender;
 	}
 
 	@Override
 	public String toString() {
-		return "Teacher [Id= " + getId() + ",FirstName= " + getFirstName() + ", LastName= " + getLastName() + ", Age= "
-				+ getAge() + ", Gender= " + gender + "]";
+		return "Teacher [  Id=" + getId() + ", First Name=" + getFirstName() + ", Last Name="
+				+ getLastName() + ", Gender=" + gender + ", Birth Date=" + getBirthDate() + ", Age=" + getAge()
+				+ "]";
 	}
+
 
 }
