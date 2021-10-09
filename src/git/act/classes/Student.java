@@ -3,7 +3,6 @@ package git.act.classes;
 import java.time.LocalDate;
 
 import git.act.enums.Gender;
-  
 
 public class Student extends Person {
 	Gender gender;
@@ -23,19 +22,8 @@ public class Student extends Person {
 
 	@Override
 	public String toString() {
-		return "Student [ Id=" + getId() + ", First Name=" + getFirstName()
-				+ ",Last Name=" + getLastName() + ", BirthDate=" + getBirthDate() + ", Age=" + getAge()
-				+ ", Gender=" + gender +"]";
+		return "Student [ Id=" + getId() + ", First Name=" + getFirstName() + ",Last Name=" + getLastName()
+				+ ", BirthDate=" + getBirthDate() + ", Age=" + getAge() + ", Gender=" + gender + "]";
 	}
-
-//	@Override
-//	public String toString() {
-//		return "Student [ Id= " + getId() + ", FirstName= " + getFirstName()
-//				+ ", LastName= " + getLastName() + ", Age= " + getAge() + ", Gender= " + gender + "]";
-//	}
-
-
-
-
 
 }

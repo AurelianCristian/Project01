@@ -33,7 +33,6 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-
 	public LocalDate getBirthDate() {
 		return birthDate;
 	}
@@ -56,7 +55,7 @@ public class Person {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
-		this.birthDate=birthDate;
+		this.birthDate = birthDate;
 	}
 
 }
